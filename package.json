@@ -1,0 +1,37 @@
+{
+  "name": "FavUrls",
+  "version": "1.0.0",
+  "description": "Save your favorite urls",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "watch": "nodemon  --exec \"electron .\"",
+    "reset": "git reset --hard",
+    "build": "electron-builder -w",
+    "win-cert": "electron-builder create-self-signed-cert -p udeep1995"
+  },
+  "repository": "https://github.com/udeep1995/fav-content-urls",
+  "keywords": [],
+  "author": "Udeep",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^9.0.0",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "electron-window-state": "^5.0.3",
+    "fs": "0.0.1-security"
+  },
+  "build": {
+    "appId": "com.udeep1995github.favurl",
+    "copyright": "Copyright 2020",
+    "win": {
+      "target": "zip",
+      "publisherName": "udeep1995",
+      "certificateFile": "private/udeep1995.pfx",
+      "certificatePassword":"",
+      "verifyUpdateCodeSignature": true
+    } 
+  }
+}
